@@ -139,3 +139,12 @@ Want to contribute to the PostgreSQL Prometheus Adapter? Great! Please use GitHu
 ## License
 
 The PostgreSQL Prometheus Adapter is available under the Apache 2.0 license. See [LICENSE](https://github.com/CrunchyData/postgresql-prometheus-adapter/blob/master/LICENSE) for details.
+
+
+## Build and Push Docker Image
+```
+export VERSION=1.0.0
+
+docker build -t datawow/postgresql-prometheus-adapter:${VERSION} .
+docker push datawow/postgresql-prometheus-adapter:${VERSION}
+```

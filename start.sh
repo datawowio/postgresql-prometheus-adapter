@@ -35,6 +35,7 @@ echo /postgresql-prometheus-adapter \
   --pg-threads=${pg_threads} \
   --parser-threads=${parser_threads}
 
+sh -c """
 /postgresql-prometheus-adapter \
   --adapter-send-timeout=${adapter_send_timeout} \
   --web-listen-address=${web_listen_address} \
@@ -46,4 +47,4 @@ echo /postgresql-prometheus-adapter \
   --pg-commit-rows=${pg_commit_rows} \
   --pg-threads=${pg_threads} \
   --parser-threads=${parser_threads}
-
+"""
