@@ -109,6 +109,7 @@ func (p *PGParser) RunPGParser(tid int, partitionScheme string, c *PGWriter) {
 	}
 	level.Info(c.logger).Log(fmt.Sprintf("bgparser%d", p.id), "Shutdown")
 	p.Running = false
+	os.Exit(1)
 }
 
 // PGParserShutdown is a graceful shutdown
