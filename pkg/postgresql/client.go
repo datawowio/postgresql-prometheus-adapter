@@ -183,6 +183,7 @@ func (c *PGWriter) PGWriterSave() {
 	c.PGWriterMutex.Unlock()
 	if err != nil {
 		level.Error(c.logger).Log("msg", "COPY failed for metric_values", "err", err)
+		c.PGWriterShutdown()
 	}
 	if copyCount != rowCount {
 		level.Error(c.logger).Log("msg", "All rows not copied metric_values", "err", err)
